@@ -7,6 +7,6 @@ body {
 div {
   width: 100px;
   height: 100px;
-  background: cornflowerblue;
+/*   background: cornflowerblue; */
   transition: cubic-bezier(0.38, -0.61, 1, 1.68) 1s;
 }
