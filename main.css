@@ -1,12 +1,47 @@
-body {
+body, html {
+  margin: 0px 0px;
+  padding: 0px 0px;
   width: 100vw;
   height: 100vh;
   background: pink;
 }
 
-div {
+#buttonContainer {
   width: 100px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+
 /*   background: cornflowerblue; */
-  transition: cubic-bezier(0.38, -0.61, 1, 1.68) 1s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
+
+.Modal{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ModalContent{
+  text-align: center;
+  background: white;
+  padding: 5px 15px;
+  max-width: 80%;
+}
+
+.copywrite{
+  font-size: 12px;
+}
+
+button{
+  border-radius: 4px;
+  cursor: pointer;
+}
+
