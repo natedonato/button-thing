@@ -43,5 +43,8 @@ body, html {
 button{
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
 }
 
