@@ -45,11 +45,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(top, right, bottom, left);
   });
 
+  if(screen.width <= 699){
+ 
+
+
+
+    div.addEventListener("touchstart", e => {
+      if(speed < 2){
+        speed += 0.05;
+        div.style.transition = `cubic-bezier(0.4, 0, 0.2, 1) ${speed}s`;
+      }
+      div.style.transform = `translate(${Math.random(1)*(w-100)}px, ${Math.random(1) * (h-100)}px)`;
+    });
+
+
+
+
+    if(speed > 1){
+    button.addEventListener("click", e => {
+      e.preventDefault();
+      speed = 0.2;
+      modal.style.display = 'flex';
+    });
+  }
+
+  }else{
+
   button.addEventListener("click", e => {
     e.preventDefault();
     speed = 0.2;
     modal.style.display = 'flex';
   });
+
+  }
+
 
   
 
