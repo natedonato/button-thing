@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function closeModal(){
+    speed = 0.2;
     modal.style.display = "none";
     centerButton();
   }
@@ -52,12 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       if(speed === 0.5){
-        button.addEventListener("touchstart", e => {
+        button.addEventListener("touchstart", function buttonMobile(e) {
           e.preventDefault();
           speed = 0.2;
           modal.style.display = 'flex';
+          button.removeEventListener("touchstart", buttonMobile)
         });
       }
+
+
+
 
 
       div.style.transform = `translate(${Math.random(1)*(w-100)}px, ${Math.random(1) * (h-100)}px)`;
