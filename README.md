@@ -1,6 +1,7 @@
 # Catch the button
 [Play with live demo](https://natedonato.com/button-thing)
 
-A button that runs away from your mouse.  First conceptualized in a group setting together with [Elliot Humphrey](https://github.com/evhumphrey/button-thing).
+A button that runs away from you.  First conceptualized in a group setting together with [Elliot Humphrey](https://github.com/evhumphrey/button-thing).
 
-A button that runs away from your mouse to a random new position but slows down slightly on every move until sucessfully clicked.
+Button moves to a random position any time the mouse gets close by, but slows down slightly on every move until sucessfully clicked.
+On mobile button runs away approximately 5 times before you can actually trigger it.
