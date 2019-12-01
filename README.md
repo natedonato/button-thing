@@ -1,5 +1,5 @@
 # Catch the button
-[Play](https://natedonato.com/button-thing)
+[Play with live demo](https://natedonato.com/button-thing)
 
 A button that runs away from your mouse.  First conceptualized in a group setting with [Elliot Humphrey](https://github.com/evhumphrey/button-thing), much later revisited and expanded on by me.
 
