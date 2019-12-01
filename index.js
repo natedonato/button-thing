@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           e.preventDefault();
           speed = 0.2;
           modal.style.display = 'flex';
+          centerButton();
           button.removeEventListener("touchstart", buttonMobile)
         });
       }
