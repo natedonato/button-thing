@@ -37,37 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
     div.style.transform = `translate(${Math.random(1)*(w-100)}px, ${Math.random(1) * (h-100)}px)`;
   });
 
-  document.addEventListener("mousemove", e => {
-    // console.log("MOUSE X:", e.clientX);
-    // console.log("MOUSE Y:", e.clientY);
-    const {mouseX: clientX, mouseY: clientY} = e;
-    const {left, top, right, bottom} = button.getBoundingClientRect();
-    // console.log(top, right, bottom, left);
-  });
-
   if(screen.width <= 699){
- 
-
-
-
     div.addEventListener("touchstart", e => {
+      e.preventDefault();
+      console.log(speed);
+
       if(speed < 2){
-        speed += 0.05;
+        speed = Math.floor((0.05 + speed) * 100)/100;
         div.style.transition = `cubic-bezier(0.4, 0, 0.2, 1) ${speed}s`;
+      };
+
+      if(speed === 0.5){
+        button.addEventListener("touchstart", e => {
+          e.preventDefault();
+          speed = 0.2;
+          modal.style.display = 'flex';
+        });
       }
+
+
       div.style.transform = `translate(${Math.random(1)*(w-100)}px, ${Math.random(1) * (h-100)}px)`;
     });
-
-
-
-
-    if(speed > 1){
-    button.addEventListener("click", e => {
-      e.preventDefault();
-      speed = 0.2;
-      modal.style.display = 'flex';
-    });
-  }
 
   }else{
 
@@ -75,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     speed = 0.2;
     modal.style.display = 'flex';
+    centerButton();
   });
 
   }
