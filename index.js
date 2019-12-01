@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const div = document.querySelector("#buttonContainer");
   const modal = document.querySelector(".Modal");
+  const close = document.querySelector(".close");
+
 
 
   function centerButton(){
@@ -20,10 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     centerButton();
   }
 
+
   function closeModal(){
     modal.style.display = "none";
     centerButton();
   }
+  close.addEventListener("click", closeModal)
 
 
   window.onresize = resizeWindow;
@@ -31,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   div.addEventListener("mouseenter", e => {
     if(speed < 2){
-      speed += 0.05;
+      speed += 0.1;
       div.style.transition = `cubic-bezier(0.4, 0, 0.2, 1) ${speed}s`;
     }
     div.style.transform = `translate(${Math.random(1)*(w-100)}px, ${Math.random(1) * (h-100)}px)`;
